@@ -10,9 +10,9 @@
   <url>http://maven.apache.org</url>
 
   <scm>
-    <url>http://github.com/giago/maven-android-release-plugin/tree/${scm.branch}</url>
-    <connection>scm:git:git://github.com/giago/maven-android-release-plugin.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/giago/maven-android-release-plugin.git</developerConnection>
+    <url>http://github.com/giago/android-manifest-maven-plugin/tree/${scm.branch}</url>
+    <connection>scm:git:git://github.com/giago/android-manifest-maven-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/giago/android-manifest-maven-plugin.git</developerConnection>
   </scm>
 
   <licenses>
