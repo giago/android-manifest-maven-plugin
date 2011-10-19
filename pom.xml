@@ -3,7 +3,7 @@
 
   <groupId>com.giago.maven</groupId>
   <artifactId>android-manifest-maven-plugin</artifactId>
-  <version>1.3-SNAPSHOT</version>
+  <version>1.3</version>
   <packaging>maven-plugin</packaging>
 
   <name>android-manifest-maven-plugin</name>
