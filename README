@@ -1,0 +1,10 @@
+The android-manifest-maven-plugin can be use to manipulate the versions of the android manifest
+
+The manipulation of the manifest is relative to the versionName and versionCode
+- versionName is changed accordingly with the maven version
+- versionCode is increased by one every time the command is runned
+
+There are two goals, the different is in the way the versionName is managed
+- release : in this case the plugin will take the version in the pom and apply it to the manifest without the -SNAPSHOT part
+- snapshot : similar to the release but will leave the -SNAPSHOT
+
