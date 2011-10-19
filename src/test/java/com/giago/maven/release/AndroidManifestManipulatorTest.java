@@ -8,8 +8,10 @@ import org.junit.Test;
 public class AndroidManifestManipulatorTest {
 
   private static String MANIFEST_FRAGMENT = "package=\"com.giago.imgsearch\" a:versionCode=\"13\" a:versionName=\"0.1.0\" a:installLocation=\"auto\"";
+  private static String MANIFEST_FRAGMENT_WITH_SNAPSHOT = "package=\"com.giago.imgsearch\" a:versionCode=\"13\" a:versionName=\"1.2.3-SNAPSHOT\" a:installLocation=\"auto\"";
   private static String FRAGMENT_VERSION_NAME_TEST = "package=\"com.giago.imgsearch\" a:versionCode=\"13\" a:versionName=\"1.2.3\" a:installLocation=\"auto\"";
   private static String FRAGMENT_VERSION_CODE_TEST = "package=\"com.giago.imgsearch\" a:versionCode=\"23\" a:versionName=\"0.1.0\" a:installLocation=\"auto\"";
+  
   
   @Test
   public void SHOULD_getTheCurrentVersionCode() throws MojoFailureException {
@@ -24,6 +26,11 @@ public class AndroidManifestManipulatorTest {
   @Test
   public void SHOULD_getChangeVersionCode() {
     assertEquals(FRAGMENT_VERSION_CODE_TEST, new AndroidManifestManipulator().replaceVersionCode(MANIFEST_FRAGMENT, 23));
+  }
+  
+  @Test
+  public void SHOULD_getChange() {
+    assertEquals(FRAGMENT_VERSION_NAME_TEST, new AndroidManifestManipulator().replaceVersionNameWithouhSnapshot(MANIFEST_FRAGMENT_WITH_SNAPSHOT, "1.2.3"));
   }
   
 }

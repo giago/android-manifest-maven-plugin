@@ -9,7 +9,7 @@ public class AndroidManifestManipulator {
   private static final String ATTRIBUTE_END = "\"";
   private static final String VERSION_CODE_PREFIX = "versionCode=\"";
   private static final String VERSION_NAME_PREFIX = "versionName=\"";
-  private static final String VERSION_NAME = "versionName=\"[0-9]*.[0-9]*.[0-9]*\"";
+  private static final String VERSION_NAME = "versionName=\"[0-9]*.[0-9]*.[0-9]*(-SNAPSHOT)?\"";
   private static final String VERSION_CODE = "versionCode=\"[0-9]*\"";
   
   public int getVersionCode(String manifest) throws MojoFailureException {
@@ -24,7 +24,7 @@ public class AndroidManifestManipulator {
   
   public String replaceVersionNameWithouhSnapshot(String manifest, String version) {
     version = version.replaceFirst(SNAPSHOT, EMPTY);
-    return manifest.replaceAll(VERSION_NAME, VERSION_NAME_PREFIX + version + ATTRIBUTE_END);
+    return replaceVersionName(manifest, version);
   }
 
   public String replaceVersionCode(String manifest, int code) {
