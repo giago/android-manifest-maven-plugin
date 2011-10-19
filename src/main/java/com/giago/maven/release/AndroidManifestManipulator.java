@@ -19,6 +19,10 @@ public class AndroidManifestManipulator {
   }
 
   public String replaceVersionName(String manifest, String version) {
+    return manifest.replaceAll(VERSION_NAME, VERSION_NAME_PREFIX + version + ATTRIBUTE_END);
+  }
+  
+  public String replaceVersionNameWithouhSnapshot(String manifest, String version) {
     version = version.replaceFirst(SNAPSHOT, EMPTY);
     return manifest.replaceAll(VERSION_NAME, VERSION_NAME_PREFIX + version + ATTRIBUTE_END);
   }

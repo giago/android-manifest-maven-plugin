@@ -2,11 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.giago.maven</groupId>
-  <artifactId>maven-android-release-plugin</artifactId>
+  <artifactId>android-manifest-maven-plugin</artifactId>
   <version>1.2-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
-  <name>android-release Maven Plugin</name>
+  <name>android-manifest-maven-plugin</name>
   <url>http://maven.apache.org</url>
 
   <scm>
